@@ -26,8 +26,8 @@ $(document).ready(function() {
     // }
     var total = 0;
     var points = 10;
-    if (questionOne === undefined || questionTwo===undefined) {
-      alert("heey");
+    if (questionOne === undefined || questionTwo===undefined ||) {
+      alert("Answer all the questions first");
     }else{
       if(questionOne===options[1]){total+=points}
       if(questionTwo===options[2]){total+=points}
