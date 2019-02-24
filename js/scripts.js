@@ -26,11 +26,19 @@ $(document).ready(function() {
     // }
     var total = 0;
     var points = 10;
-    if (questionOne === undefined || questionTwo===undefined ||) {
+    if (questionOne === undefined || questionTwo===undefined) {
       alert("Answer all the questions first");
     }else{
       if(questionOne===options[1]){total+=points}
       if(questionTwo===options[2]){total+=points}
+      if(questionThree===options[0]){total+=points}
+      if(questionFour===options[2]){total+=points}
+      if(questionFive===options[1]){total+=points}
+      if(questionSix===options[1]){total+=points}
+      if(questionSeven===options[3]){total+=points}
+      if(questionEight===options[2]){total+=points}
+      if(questionNine===options[2]){total+=points}
+      if(questionTen===options[2]){total+=points}
       alert(total);
     }
 
