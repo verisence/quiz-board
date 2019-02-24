@@ -1,5 +1,5 @@
-$(document)ready(function() {
-  $(button#results).click(function ress(){
+$(document).ready(function() {
+  $("button#submit1").click(function(){
     var questionOne=parseInt($("input:radio[name="quizOne"]:checked").val());
     var questionTwo=parseInt($("input:radio[name="quizTwo"]:checked").val());
     var questionThree=parseInt($("input:radio[name="quizThree"]:checked").val());
@@ -12,5 +12,7 @@ $(document)ready(function() {
     var questionTen=parseInt($("input:radio[name="quizTen"]:checked").val());
     total = questionOne+questionTwo+quizThree+quizFour+quizFive+quizSix+quizSeven+quizEight+quizNine+quizTen;
     alert(total);
+    // alert("heey");
   });
+  // alert("heey");
 });
