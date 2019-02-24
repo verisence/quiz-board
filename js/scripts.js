@@ -1,7 +1,9 @@
+//backend logic
 var options = ["a","b","c","d"];
+var total = 0;
+var points = 1;
 
-
-
+//front-end logic
 $(document).ready(function() {
   $("button#submit1").click(function(event){
 
@@ -16,9 +18,8 @@ $(document).ready(function() {
     var questionNine=$("input:radio[name=quizNine]:checked").val();
     var questionTen=$("input:radio[name=quizTen]:checked").val();
 
-    var total = 0;
-    var points = 1;
-    if (questionOne === undefined || questionTwo===undefined || questionThree === undefined || questionFour===undefined || quizFive === undefined || questionSix===undefined || questionSeven === undefined || questionEight===undefined || questionNine === undefined || questionTen===undefined) {
+
+    if (questionOne === undefined || questionTwo===undefined || questionThree === undefined || questionFour===undefined || questionFive === undefined || questionSix===undefined || questionSeven === undefined || questionEight===undefined || questionNine === undefined || questionTen===undefined) {
       alert("Answer all the questions first");
     }else{
       if(questionOne===options[1]){total+=points}
