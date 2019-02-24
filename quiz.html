@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/sripts.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico">
     <title>Quiz Board</title>
   </head>
@@ -32,22 +34,22 @@
               <p>1. Inside which HTML element do we put the JavaScript?</p>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizOne" value=""><p>scripting</p>
+                  <input type="radio" name="quizOne" value="0"><p>scripting</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizOne" value=""><p>script</p>
+                  <input type="radio" name="quizOne" value="1"><p>script</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizOne" value=""><p>js</p>
+                  <input type="radio" name="quizOne" value="0"><p>js</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizOne" value=""><p>javascript</p>
+                  <input type="radio" name="quizOne" value="0"><p>javascript</p>
                 </label>
               </div>
             </div><!--one-->
@@ -55,22 +57,22 @@
               <p>2. Where is the correct place to insert a JavaScript?</p>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizTwo" value=""><p>The head section.</p>
+                  <input type="radio" name="quizTwo" value="0"><p>The head section.</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizTwo" value=""><p>The body section.</p>
+                  <input type="radio" name="quizTwo" value="0"><p>The body section.</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizTwo" value=""><p>Both the head and the body section.</p>
+                  <input type="radio" name="quizTwo" value="1"><p>Both the head and the body section.</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizTwo" value=""><p>None.</p>
+                  <input type="radio" name="quizTwo" value="0"><p>None.</p>
                 </label>
               </div>
             </div><!--two-->
@@ -78,27 +80,188 @@
               <p>3. Which is the correct syntax for referring to an external script called "xxx.js"?</p>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizThree" value=""><p>script src="xxx.js"</p>
+                  <input type="radio" name="quizThree" value="1"><p>script src="xxx.js"</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizThree" value=""><p>script name="xxx.js"</p>
+                  <input type="radio" name="quizThree" value="0"><p>script name="xxx.js"</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizThree" value=""><p>script href="xxx.js"</p>
+                  <input type="radio" name="quizThree" value="0"><p>script href="xxx.js"</p>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="quizThree" value=""><p>script loc="xxx.js"</p>
+                  <input type="radio" name="quizThree" value="0"><p>script loc="xxx.js"</p>
                 </label>
               </div>
             </div><!--three-->
+            <div class="question">
+              <p>4. How do you write "Hello World" in an alert box?</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizFour" value="0"><p>alertBox("Hello world");</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizFour" value="0"><p>msgBox("Hello world");</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizFour" value="1"><p>alert("Hello world");</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizFour" value="0"><p>msg("Hello world");</p>
+                </label>
+              </div>
+            </div><!--four-->
+            <div class="question">
+              <p>5. How do you create a function in JavaScript?</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizFive" value="0"><p>function:functionName</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizFive" value="1"><p>function functionName
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizFive" value="0"><p>function=functionName</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizFive" value="0"><p>function=>functionName</p>
+                </label>
+              </div>
+            </div><!--five-->
+            <div class="question">
+              <p>6. How do you call a function named "myFunction"?</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizSix" value="0"><p>call function myFunction</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizSix" value="1"><p>myFunction()</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizSix" value="0"><p>call myFunction()</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizSix" value="0"><p>myFunction</p>
+                </label>
+              </div>
+            </div><!--six-->
+            <div class="question">
+              <p>7. How do you call a function named "myFunction"?</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizSeven" value="0"><p>if i=5 then</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizSeven" value="0"><p>if i=5 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizSeven" value="0"><p>if i==5 then</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizSeven" value="1"><p>if (i=5)</p>
+                </label>
+              </div>
+            </div><!--seven-->
+            <div class="question">
+              <p>8. How to write an IF statement for executing some code if "i" is NOT equal to 5?</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizEight" value="0"><p>if i=! 5 then</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizEight" value="0"><p>if (i=! 5) </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizEight" value="1"><p>if (i!=5)</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizEight" value="0"><p>if i<>5</p>
+                </label>
+              </div>
+            </div><!--eight-->
+            <div class="question">
+              <p>9. How does a WHILE loop start?</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizNine" value="0"><p>swhile (i<=10;i++)</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizNine" value="0"><p>while i=1 to 10</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizNine" value="1"><p>while (i<=10)</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizNine" value="0"><p>none of the above</p>
+                </label>
+              </div>
+            </div><!--nine-->
+            <div class="question">
+              <p>10. How does a FOR loop start?</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizTen" value="0"><p>for (i<=5;i++)</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizTen" value="0"><p>for i=1 to 5</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizTen" value="1"><p>for (i=0;i<=5;i++)</p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quizTen" value="0"><p>for (i=0;i<=5;)</p>
+                </label>
+              </div>
+            </div><!--ten-->
             <div class="submit">
-                <input class="btn btn-primary" type="submit" value="Submit" onclick="results()">
+                <!-- <input class="btn btn-primary" type="submit" value="Submit" onclick="results()"> -->
+                <button class="btn btn-primary" id="reses" type="button" name="button" onclick="results()">Submit</button>
             </div><!--submit-->
           </div><!--form-->
         </div><!--panel body-->
@@ -107,7 +270,5 @@
         </div>
       </div><!--panel-->
     </div><!--body container-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/sripts.js"></script>
   </body>
 </html>
