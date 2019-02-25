@@ -3,17 +3,17 @@ var options = ["a","b","c","d"];
 var total = 0;
 var points = 1;
 function percentage(){
-  var percentages = (total/10)*100;
-  $("p.percentage").text("You got "+percentages+"%");
+  var percent = (total/10)*100;
+  $("p#percentage").text("You got "+percent+"%");
   // alert(percentage);
 }
 function rating(){
   if(total>=8){
-    $("p.rating").text("You passed");
+    $("#rating").text("You have excellently passed.");
   }else if(total>=5){
-    $("p.rating").text("fair");
+    $("#rating").text("You passed fairly.");
   }else{
-    $("p.rating").text("You failed");
+    $("#rating").text("You failed. Please retake the test.");
   }
 }
 
@@ -47,13 +47,15 @@ $(document).ready(function() {
       if(questionEight===options[2]){total+=points}
       if(questionNine===options[2]){total+=points}
       if(questionTen===options[2]){total+=points}
-      $("p#output").text("Your score is "+total+" out of 10");
+      $("#output").text("Your score is "+total+" out of 10");
 
       percentage(total);
       rating(total);
     }
-
+    $("div.form").hide(200);
+    $("div.results").show(200);
     event.preventDefault();
   });
 
 });
+//hide form show res
