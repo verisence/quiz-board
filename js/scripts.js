@@ -2,6 +2,20 @@
 var options = ["a","b","c","d"];
 var total = 0;
 var points = 1;
+function percentage(){
+  var percentages = (total/10)*100;
+  $("p.percentage").text("You got "+percentages+"%");
+  // alert(percentage);
+}
+function rating(){
+  if(total>=8){
+    $("p.rating").text("You passed");
+  }else if(total>=5){
+    $("p.rating").text("fair");
+  }else{
+    $("p.rating").text("You failed");
+  }
+}
 
 
 //front-end logic
@@ -34,12 +48,9 @@ $(document).ready(function() {
       if(questionNine===options[2]){total+=points}
       if(questionTen===options[2]){total+=points}
       $("p#output").text("Your score is "+total+" out of 10");
-      function percentage(total){
-          var percentage = (total/10)*100;
-          $("p.percentage").text("You got "+percentage+"%");
-          // alert(percentage);
-      }
+
       percentage(total);
+      rating(total);
     }
 
     event.preventDefault();
