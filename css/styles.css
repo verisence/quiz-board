@@ -1,3 +1,20 @@
 #logo {
   height: 30px;
 }
+.panel-primary {
+  border-color: #f5793d;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #f5793d;
+  border-color: #f5793d;
+}
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #f5793d;
+}
+.panel-primary > .panel-heading .badge {
+  color: #f5793d;
+  background-color: #fff;
+}
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #f5793d;

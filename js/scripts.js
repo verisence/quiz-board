@@ -3,6 +3,7 @@ var options = ["a","b","c","d"];
 var total = 0;
 var points = 1;
 
+
 //front-end logic
 $(document).ready(function() {
   $("button#submit1").click(function(event){
@@ -33,8 +34,14 @@ $(document).ready(function() {
       if(questionNine===options[2]){total+=points}
       if(questionTen===options[2]){total+=points}
       $("p#output").text("Your score is "+total+" out of 10");
+      function percentage(total){
+          var percentage = (total/10)*100;
+          $("p#percentage").text("You got "+percentage+"%");
+      }
+      percentage();
     }
 
     event.preventDefault();
   });
+
 });
