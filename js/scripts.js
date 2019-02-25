@@ -36,9 +36,10 @@ $(document).ready(function() {
       $("p#output").text("Your score is "+total+" out of 10");
       function percentage(total){
           var percentage = (total/10)*100;
-          $("p#percentage").text("You got "+percentage+"%");
+          $("p.percentage").text("You got "+percentage+"%");
+          // alert(percentage);
       }
-      percentage();
+      percentage(total);
     }
 
     event.preventDefault();
