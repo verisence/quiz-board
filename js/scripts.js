@@ -13,13 +13,20 @@ function rating(){
   }else if(total>=5){
     $("#rating").text("You passed fairly.");
   }else{
-    $("#rating").text("You failed. Please retake the test.");
+    $("#rating").text("You failed. Please retake the test. To retake, press the QUESTIONS button below.");
   }
 }
 
 
+
 //front-end logic
 $(document).ready(function() {
+  $("#next").click(function(){
+    $("#questions").show();
+    $("#instructions").hide();
+    // $("#questions").prepend("<h1>JavaScript Quiz</h1>");
+    $(".heading").show();
+  });
   $("button#submit1").click(function(event){
 
     var questionOne=$("input:radio[name=quizOne]:checked").val();
@@ -35,7 +42,7 @@ $(document).ready(function() {
 
 
     if (questionOne === undefined || questionTwo===undefined || questionThree === undefined || questionFour===undefined || questionFive === undefined || questionSix===undefined || questionSeven === undefined || questionEight===undefined || questionNine === undefined || questionTen===undefined) {
-      alert("Answer all the questions first");
+      $("#output").text("Read the instructions carefully. Answer all the questions first. Click the button below to go back.");
     }else{
       if(questionOne===options[1]){total+=points}
       if(questionTwo===options[2]){total+=points}
@@ -52,10 +59,10 @@ $(document).ready(function() {
       percentage(total);
       rating(total);
     }
-    $("div.form").hide(200);
-    $("div.results").show(200);
+
     event.preventDefault();
+    $(".custom").hide(200);
+    $(".results").show(200);
   });
 
 });
-//hide form show res
